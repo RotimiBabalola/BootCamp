@@ -5,10 +5,21 @@ function Car(name, model, type){
 	this.model = model
 	this.numOfWheels = 4
 	this.numOfDoors = 4
+	this.speed = "0 km/h"
+	
 
-	this.drive = function(arg){
-		return(new Car(this.name, this.model, this.type))
-	}
+	Car.prototype.drive = function(arg) {
+		if(this.type == "trailer"){
+	    speed = arg * 11
+	    this.speed = speed.toString() + " km/h"
+	  }
+	  else{
+	  	speed = arg * 50
+	  	this.speed = speed.toString() + " km/h"
+	  }
+
+	  return this
+	};
 
 
 	if(name === undefined){
@@ -20,14 +31,8 @@ function Car(name, model, type){
 	}
 
 	if(name == "Porshe"){
+	  this.speed = "0 km/h"
 		this.numOfDoors = 2
-		//this.speed = "250km/h"
-
-		this.drive = function(arg){
-			speed = arg * 50
-			this.speed = speed.toString() + " km/h"
-			return(new Car(this.name, this.model, this.type, this.speed))
-		}
 	}
 
 	if(name == "Koenigsegg"){
@@ -36,12 +41,8 @@ function Car(name, model, type){
 	}
 
 	if(type == "trailer"){
-		this.speed = "0 km/h"
+	  this.speed = "0 km/h"
 		this.numOfWheels = 8
 		this.isSaloon = false
-		
-		this.drive = function(arg){
-		  return(new Car(this.name, this.model, this.type, this.speed = "77 km/h"))	
-		}
 	}
 }
