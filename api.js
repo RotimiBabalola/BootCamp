@@ -25,5 +25,9 @@ request(url, function (error, response, body) {
     console.log("\n")
     console.log(json)
   }
+  
+  else{
+	  console.log("An error occurred!!")
+  }
 })
 
