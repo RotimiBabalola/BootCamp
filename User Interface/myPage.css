@@ -1,0 +1,19 @@
+.center {
+    margin-left:10px;
+	vertical-align:text-top;
+}
+
+body{
+	color: light-blue;
+	background-color:blue;
+}
+
+p{
+	margin-bottom:50px;
+	margin-left:15px;
+	font-size:16px;
+}
+
+button{
+	margin-left:15px;
+}
